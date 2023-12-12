@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 37.2</title>
+</head>
+<body>
+    <script>
+        function season(monthNum) {
+
+            if (monthNum >= 1 && monthNum <= 2 || monthNum === 12) {
+                return "зима";
+            } else if (monthNum >= 3 && monthNum <= 5) {
+                return "весна";
+            } else if (monthNum >= 6 && monthNum <= 8) {
+                return "лето";
+            } else if (monthNum >= 9 && monthNum <= 11) {
+                return "осень";
+            }
+            return "Неверный номер месяца";
+        }
+
+        const monthNumber = 8;
+        const result = season(monthNumber);
+        console.log(`Месяц ${monthNumber} соответствует времени года: ${result}`);
+
+    
+    </script>
+</body>
+</html>

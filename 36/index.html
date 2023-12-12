@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 36</title>
+</head>
+<body>
+    <script>
+        const baseNumber = 10;
+        const array = Array.from({length: baseNumber}, (_, index) => index + 1);
+        {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i] ** 2;
+            }
+            console.log("Сумма используя цикл for:", sum);
+        }
+
+        {
+            let sumOf = 0;
+            for (const num of array){
+                sumOf += num ** 2;
+            }
+            console.log("Сумма используя конструкцию for... of: ", sumOf);
+        }
+
+        {
+            let sumForEach = 0;
+            array.forEach((num) => {
+                sumForEach += num **2;
+            });
+            console.log("Сумма используя метод forEach: ", sumForEach);
+        }
+
+        {
+            let sumReduce = array.reduce((accumulator, currentValue) => accumulator + currentValue**2, 0);
+            console.log("Сумма используя метод reduce: ", sumReduce);
+        }
+
+        
+    </script>
+</body>
+</html>
